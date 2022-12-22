@@ -17,44 +17,46 @@ function App() {
         </div>
       </header>
       <main>
-        <div className="counter">
-          <div className="commandBox">
-            {counter > 0 ? (
-              <img
-                src={remove}
-                alt="remove"
-                onClick={() => {
-                  setCounter(counter - 1);
-                }}
-              />
-            ) : (
-              <img className="hide" src={remove} alt="remove" />
-            )}
+        <section>
+          <div className="counter">
+            <div className="commandBox">
+              {counter > 0 ? (
+                <img
+                  src={remove}
+                  alt="remove"
+                  onClick={() => {
+                    setCounter(counter - 1);
+                  }}
+                />
+              ) : (
+                <img className="hide" src={remove} alt="remove" />
+              )}
+            </div>
+            <div className="value">
+              <p>{counter}</p>
+            </div>
+            <div className="commandBox">
+              {counter < 10 && (
+                <img
+                  src={add}
+                  alt="add"
+                  onClick={() => {
+                    // on appelle setCounter pour mettre à jour le state
+                    setCounter(counter + 1);
+                  }}
+                />
+              )}
+            </div>
           </div>
-          <div className="value">
-            <p>{counter}</p>
-          </div>
-          <div className="commandBox">
-            {counter < 10 && (
-              <img
-                src={add}
-                alt="add"
-                onClick={() => {
-                  // on appelle setCounter pour mettre à jour le state
-                  setCounter(counter + 1);
-                }}
-              />
-            )}
-          </div>
-        </div>
-        <button
-          onClick={() => {
-            // on appelle setCounter pour mettre à jour le state
-            setCounter(0);
-          }}
-        >
-          Reset
-        </button>
+          <button
+            onClick={() => {
+              // on appelle setCounter pour mettre à jour le state
+              setCounter(0);
+            }}
+          >
+            Reset
+          </button>
+        </section>
       </main>
       <footer>
         <p>

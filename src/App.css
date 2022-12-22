@@ -39,11 +39,16 @@ header > img {
 
 main {
   display: flex;
+  height: 70vh;
+}
+section {
+  display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 30px;
   justify-content: center;
-  gap: 77px;
-  padding: 100px 0;
+  align-items: center;
+  margin: auto auto;
+  /* height: 100vh; */
 }
 
 .counter {
